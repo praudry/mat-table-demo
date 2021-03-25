@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { Employee } from 'src/app/types/employee';
 
 @Component({
-  selector: 'app-age-column',
+  selector: 'age-column',
   templateUrl: './age-column.component.html',
   styleUrls: ['./age-column.component.scss']
 })

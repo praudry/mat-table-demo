@@ -1,7 +1,7 @@
 <app-m-table [columnData]="tableColumnDefs"></app-m-table>
 
 <ng-template #nameTemp let-columnData let-columnId="columnId">
-    <app-name-column [appDataObject]="columnData"></app-name-column>
+    <name-column [appDataObject]="columnData"></name-column>
 </ng-template>
 <ng-template #ageTemplate let-columnData let-columnId="columnId">
     <age-column [appDataObject]="columnData"></age-column>

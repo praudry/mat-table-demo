@@ -27,8 +27,7 @@ export class TableContainerComponent implements OnInit {
       {
         columnOrder: 2,
         columnId: 'age',
-        columnName: 'Age',
-        columnContent: this.ageTemplate
+        columnName: 'Age'
       },
       {
         columnOrder: 3,
