@@ -1,0 +1,11 @@
+<app-m-table [columnData]="tableColumnDefs"></app-m-table>
+
+<ng-template #nameTemp let-columnData let-columnId="columnId">
+    <app-name-column [appDataObject]="columnData"></app-name-column>
+</ng-template>
+<ng-template #ageTemplate let-columnData let-columnId="columnId">
+    <age-column [appDataObject]="columnData"></age-column>
+</ng-template>
+<ng-template #emailTemplate let-columnData let-columnId="columnId">
+    <email-column [appDataObject]="columnData"></email-column>
+</ng-template>

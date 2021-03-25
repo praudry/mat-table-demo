@@ -1,0 +1,19 @@
+<table 
+    mat-table
+    [dataSource]="tableRows">
+    <ng-container *ngFor="let column of columnData" [matColumnDef]="column.columnId">
+        <th mat-header-cell *matHeaderCellDef>{{column.columnName}}</th>
+        <td mat-cell *matCellDef="let columnCell">
+            <ng-template
+                [ngTemplateOutletContext]="{ $implicit: columnCell, columnId: column.columnId }"
+                [ngTemplateOutlet]="column.columnContent ? column.columnContent : defaultTemplate">
+            </ng-template>
+        </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
+    <tr mat-row *matRowDef="let row; columns: columnsToDisplay;"></tr>
+</table>
+<ng-template #defaultTemplate let-columnData let-columnId="columnId">
+    {{columnData[columnId]}}
+</ng-template>
