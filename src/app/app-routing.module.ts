@@ -9,7 +9,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/app/table',
+    redirectTo: '/apps/table',
     pathMatch: 'full'
   }
 ];
